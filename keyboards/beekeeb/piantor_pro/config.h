@@ -16,17 +16,3 @@
 #define SPLIT_HAND_PIN GP17
 #define SPLIT_HAND_PIN_LOW_IS_LEFT
 
-// Mouse key speed and acceleration, taken from Miryoku
-#undef MOUSEKEY_DELAY
-#define MOUSEKEY_DELAY          0
-#undef MOUSEKEY_INTERVAL
-#define MOUSEKEY_INTERVAL       16
-#undef MOUSEKEY_WHEEL_DELAY
-#define MOUSEKEY_WHEEL_DELAY    0
-#undef MOUSEKEY_MAX_SPEED
-#define MOUSEKEY_MAX_SPEED      2
-#undef MOUSEKEY_TIME_TO_MAX
-#define MOUSEKEY_TIME_TO_MAX    64
-
-// Adding combined mode
-#define MK_COMBINED

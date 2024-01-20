@@ -1,5 +1,4 @@
 #include QMK_KEYBOARD_H
-#include "oled_driver.h"
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -56,7 +55,6 @@ bool oled_task_user(void) {
 
     return false;
 }
-#endif
 
 // Render a message before going into bootloader mode.
 void oled_render_boot(bool bootloader) {
@@ -76,4 +74,7 @@ void oled_render_boot(bool bootloader) {
 bool shutdown_user(bool jump_to_bootloader) {
     oled_render_boot(jump_to_bootloader);
 }
+
+#endif
+
 

@@ -1,5 +1,5 @@
 #include QMK_KEYBOARD_H
-
+#include "oled_driver.h"
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -47,6 +47,13 @@ bool oled_task_user(void) {
             // write_ln avoids having to use \n
             oled_write_ln_P(PSTR("Undefined"), false);
     }
+
+    // Host Keyboard LED Status
+    led_t led_state = host_keyboard_led_state();
+    oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
+    oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
+    oled_write_P(led_state.scroll_lock ? PSTR("SCR ") : PSTR("    "), false);
+
     return false;
 }
 #endif

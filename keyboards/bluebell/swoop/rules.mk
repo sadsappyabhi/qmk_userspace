@@ -11,6 +11,7 @@ RGBLIGHT_ENABLE = yes       # Enable underlight
 SPLIT_KEYBOARD = yes
 
 OLED_ENABLE = yes
+LTO_ENABLE = yes
 OLED_DRIVER = ssd1306
 OLED_TRANSPORT = i2c
-
+OLED_DRIVER_ENABLE = yes

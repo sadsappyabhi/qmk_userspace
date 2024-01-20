@@ -19,6 +19,10 @@
 
 // OLED driver
 #ifdef OLED_DRIVER_ENABLE
-  #define OLED_DISPLAY_128X32
-  #define OLED_TIMEOUT 30000
+    #define OLED_DISPLAY_128X32
+    #define OLED_TIMEOUT 30000
+    #define OLED_BRIGHTNESS 128
+    #define OLED_FADE_OUT
+    #define OLED_FADE_OUT_INTERVAL 7
+    #define OLED_SCROLL_TIMEOUT 10000
 #endif
